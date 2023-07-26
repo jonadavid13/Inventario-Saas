@@ -1,0 +1,25 @@
+{
+  "short_name": "Inventario de Artículos",
+  "name": "Sistema de Gestión de Inventario | Farmacias SAAS",
+  "icons": [
+    {
+      "src": "saas-icon-verde.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "saas-icon-verde.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "saas-icon-verde.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
