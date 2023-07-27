@@ -1,22 +1,20 @@
+import React from "react";
+import { HeaderMain } from "./components/HeaderMain";
+import "./assets/styles/index.scss";
 
 function App() {
   return (
     <>
       <div className="App">
-        <header className="App-header">
-          <p className="fs-3">
-            Sistema web en construcción.
-          </p>
-          <a
-            className="App-link"
-            href="https://jonadavid-webdesign.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Link de referencia
-          </a>
-        <button name='boton' className='btn btn-secondary disabled mt-4'>Botón desactivado</button>
-        </header>
+        <HeaderMain/>
+        <div className="d-flex">
+          <button name="action1" id="btn1" className="btn btn-primary">Pedir datos</button>
+          <button name="action1" id="btn1" className="btn btn-secondary">Pedir datos</button>
+          <button name="action1" id="btn1" className="btn btn-success">Pedir datos</button>
+          <button name="action1" id="btn1" className="btn btn-warning">Pedir datos</button>
+          <button name="action1" id="btn1" className="btn btn-danger">Pedir datos</button>
+          <button name="action1" id="btn1" className="btn btn-dark">Pedir datos</button>
+        </div>
       </div>
     </>
   );
