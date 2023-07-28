@@ -4,7 +4,7 @@ import { Proveedores } from "../pages/Proveedores";
 const routes = [
     {
         title: 'Inventario',
-        path: '/inventario',
+        path: '/',
         component: Inventario
     },
     {
