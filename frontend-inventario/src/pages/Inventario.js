@@ -1,17 +1,17 @@
-import React from "react";
+import { React } from "react";
 import { HeaderMain } from "../components/HeaderMain";
 import Table from "react-bootstrap/Table";
 
 function Inventario() {
+    //const [showModal, setShowModal] = useState(null);
+    //const setModal = (form) => setShowModal(form);
+
     return (
         <>
-            <HeaderMain />
+            <HeaderMain/>
             <main className="main-container">
                 <div className="main-header-container d-flex justify-content-between align-items-center">
                     <h2 className="page-title">Inventario</h2>
-                    <div className="d-flex">
-
-                    </div>
                 </div>
 
                 <section className="section-container section-articulos">
@@ -65,7 +65,7 @@ function Inventario() {
 
                 <div className="section-divider"></div>
 
-                <section className="section-container lotes-container">
+                <section className="section-container section-lotes">
                     <div className="section-header-container d-flex justify-content-between align-items-center my-2">
                         <h3 className="section-title">Lotes ingresados</h3>
                         <div>
@@ -121,6 +121,9 @@ function Inventario() {
                 </section>
 
             </main>
+
+            <div className="modals-container">
+            </div>
         </>
     );
 }

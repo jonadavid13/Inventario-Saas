@@ -1,8 +1,9 @@
-import React from "react";
+import { React} from "react";
 import { HeaderMain } from "../components/HeaderMain";
 import { Table } from "react-bootstrap";
 
 function Proveedores(){
+
     return(
         <>
             <HeaderMain/>
@@ -47,6 +48,7 @@ function Proveedores(){
                     </div>
                 </section>
             </main>
+            
         </>
     )
 }

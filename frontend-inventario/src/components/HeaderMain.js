@@ -17,7 +17,7 @@ function HeaderMain () {
                 />
               </figure>
 
-              <Navbar.Brand href="#home" className="ms-3">
+              <Navbar.Brand href="/" className="ms-3">
                 Gestión de Inventario
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />

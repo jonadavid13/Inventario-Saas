@@ -1,10 +1,11 @@
 import { Inventario } from "../pages/Inventario";
 import { Proveedores } from "../pages/Proveedores";
+import { Home } from "../pages/Home";
 
 const routes = [
     {
         title: 'Inventario',
-        path: '/',
+        path: '/inventario',
         component: Inventario
     },
     {
@@ -12,6 +13,11 @@ const routes = [
         path: '/proveedores',
         component: Proveedores
     },
+    {
+        title: 'Home',
+        path: '/',
+        component: Home
+    }
 ];
 
 export default routes;
