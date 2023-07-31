@@ -1,10 +1,22 @@
-import { React } from "react";
+import  React, { useState } from "react";
 import { HeaderMain } from "../components/HeaderMain";
 import Table from "react-bootstrap/Table";
+import { Modal } from "react-bootstrap";
+import { ModalAddProducto } from "../components/ModalAddProducto";
 
 function Inventario() {
-    //const [showModal, setShowModal] = useState(null);
-    //const setModal = (form) => setShowModal(form);
+    const [modal, setModal] = useState({
+        form: null,
+        show: false,
+    });
+    const showModal = (form) => setModal({
+        form: form,
+        show: true
+    });
+    const closeModal = () => setModal({
+        form: null,
+        show: false
+    });
 
     return (
         <>
@@ -18,11 +30,8 @@ function Inventario() {
                     <div className="section-header-container d-flex justify-content-between align-items-center my-2">
                         <h3 className="section-title">Lista de artículos</h3>
                         <div>
-                            <button type="button" className="btn btn-success">
+                            <button type="button" className="btn btn-success" onClick={() => showModal("addArticulo")}>
                                 Agregar articulo
-                            </button>
-                            <button type="button" className="btn btn-primary ms-2">
-                                Registrar compra
                             </button>
                         </div>
                     </div>
@@ -123,6 +132,18 @@ function Inventario() {
             </main>
 
             <div className="modals-container">
+                <Modal show={ modal.form === "addArticulo" && true } onHide={closeModal} id="ModalFormAddArticulo" backdrop="static" keyboard={false}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Agregar artículo</Modal.Title>
+                    </Modal.Header>
+
+                    <ModalAddProducto/>
+
+                    <Modal.Footer>
+                        <button type="button" className="btn btn-secondary" onClick={closeModal}>Cancelar</button>
+                        <button type="button" className="btn btn-primary">Guardar</button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         </>
     );
